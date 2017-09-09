@@ -1,0 +1,23 @@
+{
+  "name": "crudnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allefsousa/CrudNodeJs.git"
+  },
+  "author": "Allef",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allefsousa/CrudNodeJs/issues"
+  },
+  "homepage": "https://github.com/allefsousa/CrudNodeJs#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  }
+}
