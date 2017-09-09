@@ -15,6 +15,8 @@ module.exports = function(app){
      //criando um objeto de clientes
     var listaClientes = cli.all();
 
+    // renderizando a view e passando um objeto para ser acessado e exibido.
+    // no caso um objeto de clientes
     res.render('site/index',{c:listaClientes});
   });
 };
