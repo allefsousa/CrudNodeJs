@@ -16,6 +16,13 @@
 
 
            <p> <%=texto%>  </p>
+           <ul>
+
+           <% for(var chave in c){  %>
+                <li><%= c[chave].nome %> - <%= c[chave].email %> </li>
+            <%  } %>
+
+           </ul>
         </body>
 
     </html>
