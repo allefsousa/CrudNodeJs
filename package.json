@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/allefsousa/CrudNodeJs#readme",
   "dependencies": {
+    "body-parser": "^1.18.0",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "mysql": "^2.14.1"

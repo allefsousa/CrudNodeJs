@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Index | Home</title>
-        </head>
+<html>
 
-        <body>
-           <h1>Pagina Index!! </h1>
-           <!-- 
+<head>
+    <title>Index | Home</title>
+    <script>
+        function limpa() {
+            if (document.getElementById('nome').value != "") {
+                document.getElementById('nome').value = "";
+                document.getElementById('email').value = "";
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Pagina Index!! </h1>
+    <!-- 
 
             Java Script junto com Html trabalahndco om template Engine 
             Ejs Atua da mesma forma que o PHP 
            -->
 
-            <% var texto = "Trabalhando com EJS";            %>
+    <% var texto = "Trabalhando com EJS";            %>
 
 
-           <p> <%=texto%>  </p>
-           <ul>
+        <p>
+            <%=texto%>
+        </p>
+        <ul>
 
-           <% for(var chave in c){  %>
-                <li><%= c[chave].nome %> - <%= c[chave].email %> </li>
-            <%  } %>
+            <% for(var chave in c){  %>
+                <li>
+                    <%= c[chave].nome %> -
+                        <%= c[chave].email %>
+                </li>
+                <%  } %>
 
-           </ul>
-        </body>
+        </ul>
 
-    </html>
+        <br>
+        <form action="/" method="post">
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="text" name="email" placeholder="E-mail">
+
+            <button> Adicionar </button>
+
+        </form>
+
+
+
+</body>
+
+</html>

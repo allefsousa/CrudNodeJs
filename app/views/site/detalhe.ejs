@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Detalhe</title>
+        </head>
+
+        <body>
+           <h1>Pagina Detalhe </h1>
+           <!-- 
+
+            Java Script junto com Html trabalahndco om template Engine 
+            Ejs Atua da mesma forma que o PHP 
+           -->
+
+            <% var texto = "Trabalhando com EJS + NodeJs = Recendo parametros na URL";            %>
+
+
+           <p> <%=texto%>  </p>
+           <ul>
+
+          
+                <li><%= cliente[0].nome %> - <%= cliente[0].email %> </li>
+
+           </ul>
+        </body>
+
+    </html>

@@ -6,17 +6,33 @@ var clienteController = require('../controllers/clienteController');
  * exportando uma função que como parametro recebe um app .
  * toda a trativa do app esta no diretorio config.
  */
-module.exports = function(app){
-  app.get('/contato',function(req,res){
-        console.log(cli.all()); // mostrando o nome do cliente
+module.exports = function (app) {
+  app.get('/contato', function (req, res) {
     res.render('site/contato');
   });
 
-  app.get('/',function(req,res){
+  app.get('/', function (req, res) {
 
-    clienteController.index(req,res);
-   
-   
+    clienteController.index(req, res);
+
+
   });
+
+  // recebendo parametros na requisição
+  app.get('/detalhe/:id', function (req, res) {
+    //console.log(req.params.id); recebendo os paramentro da url
+    clienteController.show(req, res); // enviando a request e a responde para a controller !! 
+
+
+  });
+
+  // criando o methodo post
+  app.post('/', function (req, res) {
+
+    clienteController.salvar(req, res);
+
+
+  });
+
 
 };
