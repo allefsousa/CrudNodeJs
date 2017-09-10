@@ -13,10 +13,12 @@ module.exports = function(app){
 
   app.get('/',function(req,res){
      //criando um objeto de clientes
-    var listaClientes = cli.all();
-
-    // renderizando a view e passando um objeto para ser acessado e exibido.
+   cli.all(function (erro,resultado){
+      // renderizando a view e passando um objeto para ser acessado e exibido.
     // no caso um objeto de clientes
-    res.render('site/index',{c:listaClientes});
+         res.render('site/index',{c:resultado});
+    });
+
+   
   });
 };
