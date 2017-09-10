@@ -7,14 +7,9 @@
  /**
   * Criando a conexão com o banco de dados 
   */
-var mysql = require('mysql');
+ var db = require('../../config/db')
 
-var con = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'curso_node'
-});
+
 
 
 
@@ -25,6 +20,7 @@ module.exports = function(){
     // this = faz referencia a toda a função.
     // função para retornar um cliente
     this.all = function(){
+        var con = db();
 
 
          /** fazendo uma consulta no banco de dados , pasando como paramentro
