@@ -1,9 +1,10 @@
 
-// adicionando o modulo de clientes  e ja executando a função com o () na frente;
-var cli = require("../models/clienteModel")();
+var clienteController = require('../controllers/clienteController');
 
 /**
- * Arquivo para configurar as rotas dentro diretorio route
+ * Arquivo para configurar as rotas dentro diretorio server.
+ * exportando uma função que como parametro recebe um app .
+ * toda a trativa do app esta no diretorio config.
  */
 module.exports = function(app){
   app.get('/contato',function(req,res){
@@ -12,13 +13,10 @@ module.exports = function(app){
   });
 
   app.get('/',function(req,res){
-     //criando um objeto de clientes
-   cli.all(function (erro,resultado){
-      // renderizando a view e passando um objeto para ser acessado e exibido.
-    // no caso um objeto de clientes
-         res.render('site/index',{c:resultado});
-    });
 
+    clienteController.index(req,res);
+   
    
   });
+
 };
