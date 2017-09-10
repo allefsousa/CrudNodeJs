@@ -3,16 +3,6 @@
 
 <head>
     <title>Index | Home</title>
-    <script>
-        function limpa() {
-            if (document.getElementById('nome').value != "") {
-                document.getElementById('nome').value = "";
-                document.getElementById('email').value = "";
-
-            }
-        }
-
-    </script>
 </head>
 
 <body>
@@ -33,14 +23,15 @@
 
             <% for(var chave in c){  %>
                 <li>
-                    <%= c[chave].nome %> -
-                        <%= c[chave].email %>
+                    <%= c[chave].nome %> - <%= c[chave].email %>
                 </li>
                 <%  } %>
 
         </ul>
 
         <br>
+
+
         <form action="/" method="post">
             <input type="text" name="nome" placeholder="Nome">
             <input type="text" name="email" placeholder="E-mail">

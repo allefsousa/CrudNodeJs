@@ -24,13 +24,13 @@ module.exports.salvar = function (req, res) {
 
     var dados = req.body; // pegando os dados do formulario e passando -os para o formato Json
     // para serem persistidos
-  /*  console.log(dados); // exibindo os dados ja no formato Json
-    return; // utilizado para parar a execução nesse ponto
-*/
+    /*  console.log(dados); // exibindo os dados ja no formato Json
+      return; // utilizado para parar a execução nesse ponto
+  */
 
     cli.save(dados, function (erro, resultado) {
         if (!erro) {
-             res.redirect("/");
+            res.redirect("/");
 
         } else {
             console.log("Erro ao Adicionar Cliente !!");
